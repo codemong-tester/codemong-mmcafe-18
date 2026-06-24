@@ -1,2 +1,3 @@
 package com.mmcafe.board.dto;
-public record BoardRequest(String title, String content) { }
+    import jakarta.validation.constraints.NotBlank;
+public record BoardRequest(@NotBlank(message = "title must not be blank") String title, @NotBlank(message = "content must not be blank") String content) { }

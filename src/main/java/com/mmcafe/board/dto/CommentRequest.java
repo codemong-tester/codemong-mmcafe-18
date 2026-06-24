@@ -1,2 +1,3 @@
 package com.mmcafe.board.dto;
-public record CommentRequest(String content) { }
+        import jakarta.validation.constraints.NotBlank;
+public record CommentRequest(@NotBlank(message = "content must not be blank") String content) { }
